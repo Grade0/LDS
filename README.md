@@ -26,3 +26,10 @@ Write a python program that splits the content of answers full.csv into the six 
 
 > **_Assignment 2:_**
 > Write a Python program that populates the database GroupID DB with all teh data you prepared in Assignment 1, establishing schema relations as appropriate.
+
+<p align = "center">
+<img src = "/Database%20diagram%20schema/Database%20schema.png" width="80%" height="80%" border-radius: 90%>
+</p>
+<p align = "center">
+Fig.1 - Database diagram
+</p>
