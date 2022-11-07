@@ -15,7 +15,7 @@ answer_full = Path("Dataset/answerdatacorrect.csv")
 # Define the answer table
 answerTable = Path("Tables/answer.csv")
 answerHeader = ["QuestionId", "UserId", "AnswerId", "SubjectId", "OrganizationId", "DateId"]
-answerOthers = ["AnswerValue", "CorrectAnswer", "Confidence", "iscorrect"]
+answerOthers = ["AnswerValue", "CorrectAnswer", "Confidence", "IsCorrect"]
 
 organizationTable = Path("Tables/organization.csv")
 organizationHeader = ["Organizationid"]
@@ -39,25 +39,35 @@ geoOthers = ["Region", "Country_Name", "Continent"]
 
 def extract_table(file, header):
     print(f"Extracting {file}\nwith header: {header}…")
-    ids = -1
+    #ids = -1
     with open(file, mode="w+") as targetFile:
         targetFile.write(f"{','.join(header)}\n")
         with open(answer_full) as sourceFile:
+            
+            # Iterate over rows
             sourceRows = csv.DictReader(sourceFile)
             for row in sourceRows:
                 to_write = ""
+                
+                # Combine the right values for the row
                 for row_key, row_value in row.items():
                     if row_key in header:
                         to_write = f"{to_write},{row_value}"
+                        
+                # if extracting table is answer
+                # then compare AnswerValue with CorrectAnswer
+                # in order to get the correct value of IsCorrect
                 if "answer" in file.stem:
                     if row["AnswerValue"] == row["CorrectAnswer"]:
                         to_write = f"{to_write},1"
                     else:
                         to_write = f"{to_write},0"
+                
+                #Write the new now to the file
                 targetFile.write(f"{to_write[1:]}\n")
 
                 
-extract_table(answerTable , answerOthers)   
+extract_table(answerTable, answerOthers)   
             
             
 # problemi da risolvere:
