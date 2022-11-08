@@ -1,0 +1,77 @@
+GeoId,Region,Country_Name,Continent
+1,mecklenburg-vorpommern,Germany,EU
+2,south-east usa,United States,NA
+3,connaught,Ireland,EU
+4,north italy,Italy,EU
+5,bavaria,Germany,EU
+6,brandenburg,Germany,EU
+7,northern island-northern,New Zealand,OC
+8,lower saxony,Germany,EU
+9,north west usa,United States,NA
+10,castilla,Spain,EU
+11,north west england,United Kingdom,EU
+12,munster,Ireland,EU
+13,north east england,United Kingdom,EU
+14,saxony,Germany,EU
+15,vascongadas,Spain,EU
+16,north west france,France,EU
+17,andalucia,Spain,EU
+18,south island-southern,New Zealand,OC
+19,leinster,Ireland,EU
+20,atlantic provinces,Canada,NA
+21,berlin,Germany,EU
+22,north rhine-westphalla,Germany,EU
+23,hamburg,Germany,EU
+24,center italy,Italy,EU
+25,galicia,Spain,EU
+26,aragon,Spain,EU
+27,ulster,Ireland,EU
+28,upland france,France,EU
+29,asturleon,Spain,EU
+30,schleswig-holstein,Germany,EU
+31,quebec,Canada,NA
+32,south west england,United Kingdom,EU
+33,scotland,United Kingdom,EU
+34,london,United Kingdom,EU
+35,wales,United Kingdom,EU
+36,wallonia,Belgium,EU
+37,tasmania,Australia,OC
+38,british columbia,Canada,NA
+39,east midlands,United Kingdom,EU
+40,south italy,Italy,EU
+41,rhineland-palatinate,Germany,EU
+42,mid-west usa,United States,NA
+43,saxony-anhalt,Germany,EU
+44,baden-wuttemberg,Germany,EU
+45,victoria,Australia,OC
+46,south west usa,United States,NA
+47,mid-atalntic,United States,NA
+48,north east france,France,EU
+49,bremen,Germany,EU
+50,north island-central east,New Zealand,OC
+51,saarland,Germany,EU
+52,west midlands,United Kingdom,EU
+53,hessen,Germany,EU
+54,heart of france,France,EU
+55,ontario,Canada,NA
+56,queensland,Australia,OC
+57,flanders,Belgium,EU
+58,east england,United Kingdom,EU
+59,new south wales,Australia,OC
+60,the north,Canada,NA
+61,south australia,Australia,OC
+62,yorkshire,United Kingdom,EU
+63,western australia,Australia,OC
+64,south east england,United Kingdom,EU
+65,northern territory,Australia,OC
+66,brussels,Belgium,EU
+67,north-east usa,United States,NA
+68,le midi france,France,EU
+69,thuringia,Germany,EU
+70,prairie provinces,Canada,NA
+71,west usa,United States,NA
+72,south island-central,New Zealand,OC
+73,south island northern,New Zealand,OC
+74,southwest france,France,EU
+75,north island-central west,New Zealand,OC
+76,north island-southern,New Zealand,OC
