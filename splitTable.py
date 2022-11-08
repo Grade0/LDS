@@ -40,7 +40,7 @@ geoHeader = ["GeoId", "Region", "Country_Name", "Continent"]
 def extract_table(file, header):
     print(f"Extracting {file}\nwith header: {header}…")
     ids = 0
-    regions = set()
+    regions = {}
     with open(file, mode="w+") as targetFile:
         targetFile.write(f"{','.join(header)}\n")
         
@@ -50,12 +50,13 @@ def extract_table(file, header):
             for row in sourceRows:
                 to_write = ""
                 # Combine the right values for the row
-                for row_key, row_value in row.items():
-                    if row_key in header:
-                        if "geography" not in file.stem:
+                # Geography is skipped because it will be handled later
+                if "geography" not in file.stem:
+                    for row_key, row_value in row.items():
+                        if row_key in header:
                             to_write = f"{to_write},{row_value}"
                         
-                # if extracting table is answer-1 alpha-2
+                # if extracting table is answer
                 # then compare AnswerValue with CorrectAnswer
                 # in order to get the correct value of IsCorrect
                 if "answer" in file.stem:
@@ -64,13 +65,14 @@ def extract_table(file, header):
                     else:
                         to_write = f"{to_write},0"
                         
+                # if extracting table is answer
                 if "geography" in file.stem:
                     regionName = row["Region"]
-                    if regionName not in regions:
-                        ids = ids + 1
-                        regions.add(regionName)
+                    if regions.get(regionName) == None:
+                        ids += 1
+                        regions[regionName] = ids
                         
-                        # converting uk to gb according to ISO 3166 standard
+                        # converting uk to gb according to ISO 3166-1 alpha-2 standard
                         if row["CountryCode"] == "uk": row["CountryCode"] = "gb"
                         #converting CountryCode to CountryName
                         country_name = pc.country_alpha2_to_country_name(row["CountryCode"].upper(), cn_name_format="default")
