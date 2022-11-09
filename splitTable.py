@@ -9,8 +9,10 @@ Created on Sat Nov  5 12:26:44 2022
 from pathlib import Path
 import csv
 import pycountry_convert as pc
+import ast
 
 answer_full = Path("Dataset/answerdatacorrect.csv")
+subject_metadata = Path("Dataset/subject_metadata.csv")
 
 
 # Define the answer table
@@ -27,8 +29,7 @@ dateHeader = ["DateId"]
 dateOthers = ["Date", "Day", "Month", "Year", "Quarter"]
 
 subjectTable = Path("Tables/subject.csv")
-subjectHeader = ["SubjectId"]
-subjectOthers = ["Description"]
+subjectHeader = ["SubjectId","Description"]
 
 userTable = Path("Tables/user.csv")
 userHeader = ["UserId", "DateOfBirthId", "GeoId"]
@@ -41,6 +42,7 @@ def extract_table(file, header):
     print(f"Extracting {file}\nwith header: {header}…")
     ids = 0
     regions = {}
+    subIds = set()
     with open(file, mode="w+") as targetFile:
         targetFile.write(f"{','.join(header)}\n")
         
@@ -49,12 +51,6 @@ def extract_table(file, header):
             sourceRows = csv.DictReader(sourceFile)
             for row in sourceRows:
                 to_write = ""
-                # Combine the right values for the row
-                # Geography is skipped because it will be handled later
-                if "geography" not in file.stem:
-                    for row_key, row_value in row.items():
-                        if row_key in header:
-                            to_write = f"{to_write},{row_value}"
                         
                 # if extracting table is answer
                 # then compare AnswerValue with CorrectAnswer
@@ -66,7 +62,7 @@ def extract_table(file, header):
                         to_write = f"{to_write},0"
                         
                 # if extracting table is answer
-                if "geography" in file.stem:
+                elif "geography" in file.stem:
                     regionName = row["Region"]
                     if regions.get(regionName) == None:
                         ids += 1
@@ -81,11 +77,39 @@ def extract_table(file, header):
                         to_write = f"{to_write},{ids},{regionName},{country_name},{continent_name}"
                     else:
                         continue
+                    
+                # if extracting table is subject
+                elif "subject" in file.stem:
+                    if row["SubjectId"] not in subIds:
+                        subIds.add(row["SubjectId"])
+                        
+                        to_write = f'{to_write},"{row["SubjectId"]}"'
+                        
+                        with open(subject_metadata, mode="r", encoding='utf-8-sig') as subjectFile:
+                            subjectIds = ast.literal_eval(row["SubjectId"])
+                            subjectRows = csv.DictReader(subjectFile)
+                            to_write = f'{to_write},"'
+                            for index in subjectIds:
+                                for sub in subjectRows:
+                                    if index == int(sub["SubjectId"]):
+                                        to_write = f'{to_write}{sub["Name"]}, '
+                                        break
+                            to_write = f'{to_write[:-2]}"'
+                    else:
+                        continue
+                
+                else:
+                    # Combine the right values for the row 
+                    for row_key, row_value in row.items():
+                        if row_key in header:
+                            to_write = f"{to_write},{row_value}"
+                            
                 #Write the new row to the file
                 targetFile.write(f"{to_write[1:]}\n")
                 
 extract_table(answerTable, answerOthers)   
-extract_table(geoTable, geoHeader)
+#extract_table(geoTable, geoHeader)
+#extract_table(subjectTable, subjectHeader)
 
             
 # problemi da risolvere:
