@@ -21,28 +21,29 @@ answerHeader = ["QuestionId", "UserId", "AnswerId", "SubjectId", "OrganizationId
 answerOthers = ["AnswerValue", "CorrectAnswer", "Confidence", "IsCorrect"]
 
 organizationTable = Path("Tables/organization.csv")
-organizationHeader = ["Organizationid"]
-organizationOthers = ["GroupId", "QuizId", "SchemeOfWorkId"]
+organizationHeader = ["Organizationid", "GroupId", "QuizId", "SchemeOfWorkId"]
 
 dateTable = Path("Tables/date.csv")
 dateHeader = ["DateId"]
-dateOthers = ["Date", "Day", "Month", "Year", "Quarter"]
+dateOthers = ["DateOfBirth", "DateOfAnswer"]
 
 subjectTable = Path("Tables/subject.csv")
 subjectHeader = ["SubjectId","Description"]
 
 userTable = Path("Tables/user.csv")
-userHeader = ["UserId", "DateOfBirthId", "GeoId"]
-userOthers = ["Gender"]
+userHeader = ["UserId", "Gender", "GeoId", "DateOfBirthId"]
 
 geoTable = Path("Tables/geography.csv")
 geoHeader = ["GeoId", "Region", "Country_Name", "Continent"]
+
+userGeoId = {}
 
 def extract_table(file, header):
     print(f"Extracting {file}\nwith header: {header}…")
     ids = 0
     regions = {}
-    subIds = set()
+    elIds = set()
+    orgIds = set()
     with open(file, mode="w+") as targetFile:
         targetFile.write(f"{','.join(header)}\n")
         
@@ -51,11 +52,14 @@ def extract_table(file, header):
             sourceRows = csv.DictReader(sourceFile)
             for row in sourceRows:
                 to_write = ""
-                        
+                org_write = ',"['
                 # if extracting table is answer
                 # then compare AnswerValue with CorrectAnswer
                 # in order to get the correct value of IsCorrect
                 if "answer" in file.stem:
+                    for row_key, row_value in row.items():
+                        if row_key in header:
+                            to_write = f"{to_write},{row_value}"
                     if row["AnswerValue"] == row["CorrectAnswer"]:
                         to_write = f"{to_write},1"
                     else:
@@ -63,10 +67,15 @@ def extract_table(file, header):
                         
                 # if extracting table is answer
                 elif "geography" in file.stem:
+                
                     regionName = row["Region"]
+                    userId = row["UserId"]
                     if regions.get(regionName) == None:
+                        
                         ids += 1
                         regions[regionName] = ids
+                        userGeoId[userId] = ids
+                        
                         
                         # converting uk to gb according to ISO 3166-1 alpha-2 standard
                         if row["CountryCode"] == "uk": row["CountryCode"] = "gb"
@@ -76,12 +85,13 @@ def extract_table(file, header):
                         continent_name = pc.country_alpha2_to_continent_code(row["CountryCode"].upper())
                         to_write = f"{to_write},{ids},{regionName},{country_name},{continent_name}"
                     else:
+                        userGeoId[userId] = regions.get(regionName)
                         continue
                     
                 # if extracting table is subject
                 elif "subject" in file.stem:
-                    if row["SubjectId"] not in subIds:
-                        subIds.add(row["SubjectId"])
+                    if row["SubjectId"] not in elIds:
+                        elIds.add(row["SubjectId"])
                         
                         to_write = f'{to_write},"{row["SubjectId"]}"'
                         
@@ -97,21 +107,68 @@ def extract_table(file, header):
                             to_write = f'{to_write[:-2]}"'
                     else:
                         continue
+                            
                 
-                else:
+                elif "organization" in file.stem:
                     # Combine the right values for the row 
                     for row_key, row_value in row.items():
                         if row_key in header:
                             to_write = f"{to_write},{row_value}"
-                            
+                            org_write = f'{org_write}{row_value}, '
+                                
+                    to_write = f'{org_write[:-2]}]"{to_write}'
+                    
+                    if org_write not in orgIds:
+                        orgIds.add(org_write)
+                    else:
+                        continue
+                    
+                elif "user" in file.stem:
+                    # Combine the right values for the row 
+                    if row["UserId"] not in elIds:
+                        elIds.add(row["UserId"])
+                        geoId = userGeoId.get(row["UserId"])
+                        to_write = f'{to_write},{row["UserId"]},{row["Gender"]},{geoId}'
+                    else:
+                        continue
+                    
+                elif "date" in file.stem:
+                    # Combine the right values for the row 
+                    if row["UserId"] not in elIds:
+                        elIds.add(row["UserId"])
+                        geoId = userGeoId.get(row["UserId"])
+                        to_write = f'{to_write},{row["UserId"]},{row["Gender"]},{geoId}'
+                    else:
+                        continue
+                    
+                elif "date" in file.stem:
+                    # Combine the right values for the row 
+                    for row_key, row_value in row.items():
+                        if row_key in header:
+                            to_write = f"{to_write},{row_value}"
+                            org_write = f'{org_write}{row_value}, '
+                                
+                    to_write = f'{org_write[:-2]}]"{to_write}'
+                    
+                    if org_write not in orgIds:
+                        orgIds.add(org_write)
+                    else:
+                        continue
+                        
                 #Write the new row to the file
                 targetFile.write(f"{to_write[1:]}\n")
                 
-extract_table(answerTable, answerOthers)   
+#extract_table(answerTable, answerOthers)   
 #extract_table(geoTable, geoHeader)
 #extract_table(subjectTable, subjectHeader)
+#extract_table(dateTable, dateOthers)
+extract_table(organizationTable, organizationHeader)
+#extract_table(userTable, userHeader)
+#extract_table(dateTable, dateHeader)
+
 
             
 # problemi da risolvere:
     #manca OrganizationId, DateId, GeoId (come generarle? In che ordine?)
-    #SubjectId prensenta delle virgole la suo interno (conflitto con delimitatore)
+    #answer non funziona più dopo il cambio ordine con del codice
+    
