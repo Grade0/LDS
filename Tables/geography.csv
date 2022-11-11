@@ -1,4 +1,4 @@
-GeoId,Region,Country_Name,Continent
+GeoId,Region,CountryName,Continent
 1,mecklenburg-vorpommern,Germany,EU
 2,south-east usa,United States,NA
 3,connaught,Ireland,EU

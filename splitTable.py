@@ -32,7 +32,7 @@ userTable = Path("Tables/user.csv")
 userHeader = ["UserId", "Gender", "GeoId", "DateOfBirthId"]
 
 geoTable = Path("Tables/geography.csv")
-geoHeader = ["GeoId", "Region", "Country_Name", "Continent"]
+geoHeader = ["GeoId", "Region", "CountryName", "Continent"]
 
 # support variables
 regions = {}
