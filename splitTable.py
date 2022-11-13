@@ -8,30 +8,33 @@ Created on Sat Nov  5 12:26:44 2022
 
 from pathlib import Path
 import csv
+from rich.console import Console
+from rich.progress import track
 import pycountry_convert as pc
 import ast
+import collections
 
-answer_full = Path("Dataset/answerdatacorrect.csv")
-subject_metadata = Path("Dataset/subject_metadata.csv")
+answer_full = Path("dataset/answerdatacorrect.csv")
+subject_metadata = Path("dataset/subject_metadata.csv")
 
 
 # Define the tables path and headers
-answerTable = Path("Tables/answer.csv")
+answerTable = Path("tables/answer.csv")
 answerHeader = ["QuestionId", "UserId", "AnswerId", "CorrectAnswer", "AnswerValue", "Confidence", "SubjectId", "IsCorrect", "OrganizationId", "DateId"]
 
-organizationTable = Path("Tables/organization.csv")
+organizationTable = Path("tables/organization.csv")
 organizationHeader = ["Organizationid", "GroupId", "QuizId", "SchemeOfWorkId"]
 
-dateTable = Path("Tables/date.csv")
-dateHeader = ["DateId", "Date", "Year", "Month", "Day", "Quarter"]
+dateTable = Path("tables/date.csv")
+dateHeader = ["DateId", "Date", "Day", "Month", "Year", "Quarter"]
 
-subjectTable = Path("Tables/subject.csv")
+subjectTable = Path("tables/subject.csv")
 subjectHeader = ["SubjectId","Description"]
 
-userTable = Path("Tables/user.csv")
-userHeader = ["UserId", "Gender", "GeoId", "DateOfBirthId"]
+userTable = Path("tables/user.csv")
+userHeader = ["UserId", "DateOfBirthId", "GeoId", "Gender"]
 
-geoTable = Path("Tables/geography.csv")
+geoTable = Path("tables/geography.csv")
 geoHeader = ["GeoId", "Region", "CountryName", "Continent"]
 
 # support variables
@@ -42,7 +45,7 @@ birth_tms = {}
 answer_tms = {}
 
 def extract_table(file, header):
-    print(f"Extracting {file}\nwith header: {header}…")
+    console.log(f"Extracting {file}\nwith header: {header}…")
     ids = 0
     ids2 = 0
     
@@ -52,9 +55,8 @@ def extract_table(file, header):
         targetFile.write(f"{','.join(header)}\n")
         
         with open(answer_full) as sourceFile:
-            # Iterate over rows
-            sourceRows = csv.DictReader(sourceFile)
-            for row in sourceRows:
+            # Iterate over 538835 rows 
+            for row in track(csv.DictReader(sourceFile), total=538835):
                 execute = 1
                 to_write = ""
                 merge_write = ',"['
@@ -96,9 +98,6 @@ def extract_table(file, header):
                         # this dict is used for parse the correct geoId for user table
                         userGeoId[userId] = ids
                         
-                        
-                        # converting uk to gb according to ISO 3166-1 alpha-2 standard
-                        if row["CountryCode"] == "uk": row["CountryCode"] = "gb"
                         #converting CountryCode to CountryName
                         country_name = pc.country_alpha2_to_country_name(row["CountryCode"].upper(), cn_name_format="default")
                         #converting CountryCode to Continent
@@ -129,12 +128,22 @@ def extract_table(file, header):
                             
                             to_write = f'{to_write},"'
                             
-                            #iterate over id, if match the get the subjectName
+                            sub_lev = {}
+                            
+                            #iterate over id, if match add the subjectName 
+                            #in a dictionary indexed by "Level"
                             for index in subjectIds:
                                 for sub in subjectRows:
                                     if index == int(sub["SubjectId"]):
-                                        to_write = f'{to_write}{sub["Name"]}, '
+                                        sub_lev[sub["Level"]] = sub["Name"]
                                         break
+                            # sort the dictionary by key (level)
+                            sub_ordered = collections.OrderedDict(sorted(sub_lev.items()))
+                            
+                            #combine the values to get row
+                            for s_key, s_value in sub_ordered.items():
+                                to_write = f'{to_write}{s_value}, '
+                            
                             to_write = f'{to_write[:-2]}"'
                     else:
                         # skip the file write because is not unique
@@ -170,7 +179,7 @@ def extract_table(file, header):
                         elIds.add(row["UserId"])
                         #this dict is used to get the correct GeoId
                         geoId = userGeoId.get(row["UserId"])
-                        to_write = f'{to_write},{row["UserId"]},{birth_tms.get("UserId")},{row["Gender"]},{geoId}'
+                        to_write = f'{to_write},{row["UserId"]},{birth_tms.get("UserId")},{geoId},{row["Gender"]}'
                     else:
                         execute = 0
                 
@@ -195,7 +204,7 @@ def extract_table(file, header):
                         elif month > 3 and month <= 6: q = 2
                         elif month > 6 and month <= 9: q = 3
                         else: q = 4
-                        to_write = f'{to_write},birth_{ids},{row["DateOfBirth"]},{row["DateOfBirth"][:4]},{row["DateOfBirth"][5:7]},{row["DateOfBirth"][8:10]},{q}'
+                        to_write = f'{to_write},birth_{ids},{row["DateOfBirth"]},{row["DateOfBirth"][8:10]},{row["DateOfBirth"][5:7]},{row["DateOfBirth"][:4]},{q}'
                     else:
                         birth_tms["UserId"] = f"birth_{ids}"
                         execute = 0
@@ -215,7 +224,7 @@ def extract_table(file, header):
                         elif month > 3 and month <= 6: q = 2
                         elif month > 6 and month <= 9: q = 3
                         else: q = 4
-                        date_write = f'{date_write},answer_{ids2},{row["DateAnswered"][:10]},{row["DateAnswered"][:4]},{row["DateAnswered"][5:7]},{row["DateAnswered"][8:10]},{q}'
+                        date_write = f'{date_write},answer_{ids2},{row["DateAnswered"][:10]},{row["DateAnswered"][8:10]},{row["DateAnswered"][5:7]},{row["DateAnswered"][:4]},{q}'
                         targetFile.write(f"{date_write[1:]}\n")
 
                     else:
@@ -225,6 +234,8 @@ def extract_table(file, header):
                 #Write the new row to the file
                 if(execute):
                     targetFile.write(f"{to_write[1:]}\n")
+                    
+console = Console()
        
 # Split tables
 extract_table(organizationTable, organizationHeader)
@@ -235,5 +246,4 @@ extract_table(subjectTable, subjectHeader)
 extract_table(dateTable, dateHeader)
 extract_table(userTable, userHeader)
 
-
-    
+console.log("/nExtraction completed!")

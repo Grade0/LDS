@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov  9 23:55:49 2022
+Created on Sat Nov  5 12:28:34 2022
 
 @author: davide
 """
@@ -11,6 +11,7 @@ from pathlib import Path
 import csv
 from rich.progress import track
 from rich.console import Console
+import pandas as pd
 
 def open_conn():
     server = "tcp:131.114.72.230"  # lds.di.unipi.it
@@ -36,7 +37,7 @@ def close_conn(cn, cursor):
     
     
 def get_header_types(name: str):
-    if name == "answer":
+    if name == "answers":
         return ["int",   #QuestionId
                 "int",   #UserId
                 "int",   #AnswerId
@@ -51,14 +52,14 @@ def get_header_types(name: str):
     elif name == "geography":
         return ["int", #GeoId
                 "str", #Region
-                "str", #Country_Name
+                "str", #CountryName
                 "str"  #Continent
                 ]
     elif name == "organization":
         return ["str",  #OrganizationId
                 "int",  #GroupId
                 "int",  #QuizId
-                "float" #SchemeOfWork
+                "float" #SchemeOfWorkId
                 ]
     elif name == "subject":
         return [
@@ -68,16 +69,16 @@ def get_header_types(name: str):
     elif name == "date":
         return ["str", #DateId
                 "str", #Date
-                "int", #Year
-                "int", #Month
                 "int", #Day
+                "int", #Month
+                "int", #Year
                 "int"  #Quarter
                 ]
     elif name == "user":
-        return ["int", #DateId
-                "int", #Gender
+        return ["int", #UserId
+                "str", #DateOfBirthId
                 "int", #GeoId
-                "int"  #DateOfBirthId
+                "int"  #Gender
                 ]
     else:
         raise ValueError("get_header_type got a strange name.")
@@ -92,22 +93,23 @@ def load_table(name: str, my_path: Path, csv_len: int):
     # 2. load table into memory
     with open(my_path) as source:
         reader = csv.DictReader(source)
+        
 
         # 3. write table onto server, row by row? Remember the data-types
         commit_counter = 0
-        for row in track(reader, total=csv_len, description=f"{name}…"):
+        for row in track(reader, total=csv_len, description=f"{name}:"):
             to_send = ""
             for i, value in enumerate(row.values()):
                 if header[i] == "str":
                     # check if there's an apostrophe in the string and "escape" it
-                    position = value.find("'")
+                    position = value.find('"')
                     if position != -1:
-                        value = f"{value[:position]}'{value[position:]}"
+                        value = f'{value[:position]}"{value[position:]}'
                     to_send = f"{to_send},'{value}'"
                 else:
                     to_send = f"{to_send},{value}"
             try:
-                query = f"INSERT INTO {name} VALUES ({to_send[1:]});"
+                query = f"INSERT INTO [Group_24].[{name}] VALUES ({to_send[1:]});"
                 cursor.execute(query)
             except Exception as e:
                 print(f"Program failed on query {query}\nwith exception {e}")
@@ -126,11 +128,27 @@ def load_table(name: str, my_path: Path, csv_len: int):
 console = Console()
 tables = {}
 
-# tables["Date"] = (Path("data/dates.csv"), 375)
-# tables["Geography"] = (Path("data/countries.csv"), 124)
-# tables["Player"] = (Path("data/players.csv"), 10074)
-# tables["Tournament"] = (Path("data/tournaments.csv"), 4853)
-tables["geography"] = (Path("Tables/geography.csv"), 75)
+answer_path = Path("tables/answer.csv")
+org_path = Path("tables/organization.csv")
+date_path = Path("tables/date.csv")
+subject_path = Path("tables/subject.csv")
+user_path = Path("tables/user.csv")
+geo_path = Path("tables/geography.csv")
+
+answer_len = len(pd.read_csv(answer_path))-1
+org_len = len(pd.read_csv(org_path))-1
+date_len = len(pd.read_csv(date_path))-1
+subject_len = len(pd.read_csv(subject_path))-1
+user_len = len(pd.read_csv(user_path))-1
+geo_len = len(pd.read_csv(geo_path))-1
+
+
+#tables["answers"] = (answer_path, answer_len)
+#tables["organization"] = (org_path, org_len)
+tables["date"] = (date_path, date_len)
+#tables["subject"] = (subject_path, subject_len)
+#tables["user"] = (user_path, user_len)
+#tables["geography"] = (geo_path, geo_len)
 
 
 console.log("Loading…")
