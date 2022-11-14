@@ -35,7 +35,7 @@ print("- AnswerId has",len(df['AnswerId'].unique()), "unique values and", df.dup
 print("- UserId has",len(df['UserId'].unique()), "unique values and",df.duplicated(['UserId']).sum(), "duplicates")
 print("- SubjectId has",len(df['SubjectId'].unique()), "unique values and",df.duplicated(['SubjectId']).sum(), "duplicates")
 print("- Date Table will have a total", len(df['DateAnswered'].unique())+len(df['DateOfBirth'].unique()), "unique rows (DateAnswered + DateOfBirth)")
-print("- Organization Table will have a total", len(df[['GroupId','QuizId','SchemeOfWorkId']].nunique()), "unique rows (GroupId, QuizId, SchemeOfWorkId)")
+print("- Organization Table will have a total", df.groupby(['GroupId','QuizId','SchemeOfWorkId']).ngroups, "unique rows (GroupId, QuizId, SchemeOfWorkId)")
 print("- Geography Table will have a total", len(df['Region'].unique()), "unique rows (Region)")
 
 # Data trasformation
