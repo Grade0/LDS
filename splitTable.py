@@ -43,14 +43,15 @@ userGeoId = {}
 answerOrgId = {}
 birth_tms = {}
 answer_tms = {}
+orgIds = {}
+dateIds = {}
 
 def extract_table(file, header):
     console.log(f"Extracting {file}\nwith header: {header}…")
     ids = 0
-    ids2 = 0
     
     elIds = set()
-    orgIds = set()
+    
     with open(file, mode="w+") as targetFile:
         targetFile.write(f"{','.join(header)}\n")
         
@@ -59,11 +60,14 @@ def extract_table(file, header):
             for row in track(csv.DictReader(sourceFile), total=538835):
                 execute = 1
                 to_write = ""
-                merge_write = ',"['
+                merge_ids = ',"['
                 date_write = ""
                 
                 # if extracting table is answer
                 if "answer" in file.stem:
+                    orgId = answerOrgId.get(row["AnswerId"])
+                    dateId =  answer_tms.get(row["AnswerId"])
+                    
                     # iterate over the rows
                     for row_key, row_value in row.items():
                         
@@ -82,7 +86,7 @@ def extract_table(file, header):
                         to_write = f"{to_write},0"
                         
                     # concatenate elements in order to get the final row
-                    to_write = f'{to_write},{answerOrgId.get("AnswerId")},{answer_tms.get("AnswerId")}'
+                    to_write = f'{to_write},{orgId},{dateId}'
                         
                 # if extracting table is answer
                 elif "geography" in file.stem:
@@ -157,19 +161,20 @@ def extract_table(file, header):
                         if row_key in header:
                             to_write = f"{to_write},{row_value}"
                             # this var is used to combine the attribute and get the organizationId
-                            merge_write = f'{merge_write}{row_value}, '
+                            merge_ids = f'{merge_ids}{row_value}, '
                     
-                    merge_write = f'{merge_write[:-2]}]"'
-                    to_write = f'{merge_write}{to_write}'
+                    merge_ids = f'{merge_ids[:-2]}]"'
                     
                     # check the uniqueness of organizationId obtained
-                    if merge_write not in orgIds:
-                        orgIds.add(merge_write)
+                    if orgIds.get(merge_ids) == None:
+                        ids += 1
+                        orgIds[merge_ids] = ids
+                        to_write = f",{ids}{to_write}"
                         #this var is used for parse the correct organizzationId for answer table
-                        answerOrgId["AnswerId"] = f"{merge_write[1:]}"
+                        answerOrgId[row["AnswerId"]] = ids
                     else:
                         #idem for not uniqueness ids
-                        answerOrgId["AnswerId"] = f"{merge_write[1:]}"
+                        answerOrgId[row["AnswerId"]] = orgIds.get(merge_ids)
                         execute = 0
                     
                 # if extracting table is user
@@ -179,56 +184,60 @@ def extract_table(file, header):
                         elIds.add(row["UserId"])
                         #this dict is used to get the correct GeoId
                         geoId = userGeoId.get(row["UserId"])
-                        to_write = f'{to_write},{row["UserId"]},{birth_tms.get("UserId")},{geoId},{row["Gender"]}'
+                        #this dict is used to get the correct dateOfBirthId
+                        dateOfBirthId = birth_tms.get(row["UserId"])
+                        
+                        to_write = f'{to_write},{row["UserId"]},{dateOfBirthId},{geoId},{row["Gender"]}'
                     else:
                         execute = 0
                 
                 # if extracting table is date
                 elif "date" in file.stem:
-                    #these set are used to check the uniqueness of dates
-                    a_tms = set()
-                    b_tms = set()
+                    dateOfBirth = row["DateOfBirth"]
+                    dateAnswered = row["DateAnswered"][:10]
                     
                     # Here we check the uniqueness of DateOfBirth
-                    if row["DateOfBirth"] not in b_tms:
+                    if dateIds.get(dateOfBirth) == None:
                         # increase the index
                         ids += 1
                         # this dict is used to parse the correct dateOfBirthId for user table
-                        birth_tms["UserId"] = f"birth_{ids}"
+                        birth_tms[row["UserId"]] = ids
                         #this set is used for uniqueness
-                        b_tms.add(row["DateOfBirth"])
+                        dateIds[dateOfBirth] = ids
+                        
                         
                         # Compute che value of Quarter by month
-                        month = int(row["DateOfBirth"][5:7])
+                        month = int(dateOfBirth[5:7])
                         if month <= 3: q = 1
                         elif month > 3 and month <= 6: q = 2
                         elif month > 6 and month <= 9: q = 3
                         else: q = 4
-                        to_write = f'{to_write},birth_{ids},{row["DateOfBirth"]},{row["DateOfBirth"][8:10]},{row["DateOfBirth"][5:7]},{row["DateOfBirth"][:4]},{q}'
+                        to_write = f'{to_write},{ids},{dateOfBirth},{dateOfBirth[8:10]},{dateOfBirth[5:7]},{dateOfBirth[:4]},{q}'
+                        
                     else:
-                        birth_tms["UserId"] = f"birth_{ids}"
+                        birth_tms[row["UserId"]] = dateIds.get(dateOfBirth)
                         execute = 0
                      
                     # Here we check the uniqueness of DateAnswered
-                    if row["DateAnswered"] not in a_tms:
+                    if dateIds.get(dateAnswered) == None:
                         # increase the index
-                        ids2 += 1
+                        ids += 1
                         # this dict is used to parse the correct Dateid for answer table
-                        answer_tms["AnswerId"] = f"answer_{ids2}"
+                        answer_tms[row["AnswerId"]] = ids
                         #this set is used for uniqueness
-                        a_tms.add(row["DateAnswered"])
+                        dateIds[dateAnswered] = ids
                         
                         # Compute che value of Quarter by month
-                        month = int(row["DateAnswered"][5:7])
+                        month = int(dateAnswered[5:7])
                         if month <= 3: q = 1
                         elif month > 3 and month <= 6: q = 2
                         elif month > 6 and month <= 9: q = 3
                         else: q = 4
-                        date_write = f'{date_write},answer_{ids2},{row["DateAnswered"][:10]},{row["DateAnswered"][8:10]},{row["DateAnswered"][5:7]},{row["DateAnswered"][:4]},{q}'
+                        date_write = f'{date_write},{ids},{dateAnswered},{dateAnswered[8:10]},{dateAnswered[5:7]},{dateAnswered[:4]},{q}'
                         targetFile.write(f"{date_write[1:]}\n")
-
                     else:
-                        answer_tms["AnswerId"] = f"answer_{ids2}"
+                        answer_tms[row["AnswerId"]] = dateIds.get(dateAnswered)
+                        execute = 0
                         
                              
                 #Write the new row to the file
@@ -243,7 +252,6 @@ extract_table(dateTable, dateHeader)
 extract_table(answerTable, answerHeader)   
 extract_table(geoTable, geoHeader)
 extract_table(subjectTable, subjectHeader)
-extract_table(dateTable, dateHeader)
 extract_table(userTable, userHeader)
 
-console.log("/nExtraction completed!")
+console.log("Extraction completed!")

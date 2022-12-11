@@ -34,7 +34,6 @@ print("The csv file has a total of",len(df), "rows:")
 print("- AnswerId has",len(df['AnswerId'].unique()), "unique values and", df.duplicated(['AnswerId']).sum(), "duplicates")
 print("- UserId has",len(df['UserId'].unique()), "unique values and",df.duplicated(['UserId']).sum(), "duplicates")
 print("- SubjectId has",len(df['SubjectId'].unique()), "unique values and",df.duplicated(['SubjectId']).sum(), "duplicates")
-print("- Date Table will have a total", len(df['DateAnswered'].unique())+len(df['DateOfBirth'].unique()), "unique rows (DateAnswered + DateOfBirth)")
 print("- Organization Table will have a total", df.groupby(['GroupId','QuizId','SchemeOfWorkId']).ngroups, "unique rows (GroupId, QuizId, SchemeOfWorkId)")
 print("- Geography Table will have a total", len(df['Region'].unique()), "unique rows (Region)")
 

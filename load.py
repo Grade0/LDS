@@ -143,12 +143,13 @@ user_len = len(pd.read_csv(user_path))-1
 geo_len = len(pd.read_csv(geo_path))-1
 
 
-#tables["answers"] = (answer_path, answer_len)
-#tables["organization"] = (org_path, org_len)
+
+tables["organization"] = (org_path, org_len)
 tables["date"] = (date_path, date_len)
-#tables["subject"] = (subject_path, subject_len)
-#tables["user"] = (user_path, user_len)
-#tables["geography"] = (geo_path, geo_len)
+tables["subject"] = (subject_path, subject_len)
+tables["user"] = (user_path, user_len)
+tables["geography"] = (geo_path, geo_len)
+tables["answers"] = (answer_path, answer_len)
 
 
 console.log("Loading…")
