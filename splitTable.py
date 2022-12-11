@@ -237,7 +237,6 @@ def extract_table(file, header):
                         targetFile.write(f"{date_write[1:]}\n")
                     else:
                         answer_tms[row["AnswerId"]] = dateIds.get(dateAnswered)
-                        execute = 0
                         
                              
                 #Write the new row to the file
@@ -247,11 +246,11 @@ def extract_table(file, header):
 console = Console()
        
 # Split tables
-extract_table(organizationTable, organizationHeader)
+#extract_table(organizationTable, organizationHeader)
 extract_table(dateTable, dateHeader)
-extract_table(answerTable, answerHeader)   
-extract_table(geoTable, geoHeader)
-extract_table(subjectTable, subjectHeader)
-extract_table(userTable, userHeader)
+#extract_table(answerTable, answerHeader)   
+#extract_table(geoTable, geoHeader)
+#extract_table(subjectTable, subjectHeader)
+#extract_table(userTable, userHeader)
 
 console.log("Extraction completed!")
