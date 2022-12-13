@@ -8,7 +8,7 @@ In Part 1 of the project you are required to create and populate a database star
 
 ### Build the datawarehouse
 **answers full.csv** contains the main body of data: a table with data about answers given by students to various multiple-choice questions. In the same table, there are several data regarding the questions, the students and the subject of the questions.
-The file **subject metadata.csv** contains informations about the subject of each ques- tion. The subject is given by a list of integers in the main data that can be used to index the **answers full.csv** to retrieve the topic of the question.
+The file **subject metadata.csv** contains informations about the subject of each question. The subject is given by a list of integers in the main data that can be used to index the **answers full.csv** to retrieve the topic of the question.
 You will have to split and integrate the main file to reproduce the schema in Figure 1.
 The goal of the following assignments is to build the schema and deploy it on server lds.di.unipi.it. Beware that, just as in real-life scenario, files may contain missing values and/or useless data.
 
