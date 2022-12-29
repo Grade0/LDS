@@ -1,0 +1,225 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0ab34886-594d-4461-8b5b-9217c5b60513" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Group 24 DB</ID>
+  <Name>Group 24 DB</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Group 24 DB</DataSourceID>
+  <Schema>
+    <xs:schema id="Group_x0020_24_x0020_DB" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Group_x0020_24_x0020_DB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3c0342f0-47b9-41e5-b4a9-4f5c14e58bd7">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_sysdiagrams" msprop:design-time-name="3664fd50-f702-4149-83eb-cdb348dca9cd" msprop:DbTableName="sysdiagrams" msprop:FriendlyName="sysdiagrams" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="name" msprop:design-time-name="ce3a5514-789d-49ab-a41e-7f29d932d01e" msprop:DbColumnName="name" msprop:FriendlyName="name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="128" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="principal_id" msprop:design-time-name="a026699e-bde9-4f3d-a75a-ef239a121fd7" msprop:DbColumnName="principal_id" msprop:FriendlyName="principal_id" type="xs:int" />
+                  <xs:element name="diagram_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="5cf99238-2f9c-4b83-b1d2-581cf3097802" msprop:DbColumnName="diagram_id" msprop:FriendlyName="diagram_id" type="xs:int" />
+                  <xs:element name="version" msprop:design-time-name="2ef34812-01ac-4636-9664-445547c95900" msprop:DbColumnName="version" msprop:FriendlyName="version" type="xs:int" minOccurs="0" />
+                  <xs:element name="definition" msprop:design-time-name="226b0721-7dad-4548-8b6f-8e1cd97b6ea0" msprop:DataSize="0" msprop:DbColumnName="definition" msprop:FriendlyName="definition" type="xs:base64Binary" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_24_answers" msprop:design-time-name="374d6a1e-473b-492e-ade1-a1edad8b15c2" msprop:DbTableName="answers" msprop:FriendlyName="answers" msprop:DbSchemaName="Group_24" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="QuestionId" msprop:design-time-name="9fae8db8-e945-4879-af01-53df464a9b9d" msprop:DbColumnName="QuestionId" msprop:FriendlyName="QuestionId" type="xs:int" />
+                  <xs:element name="UserId" msprop:design-time-name="d8664b3b-67c7-4c8f-944c-f004fb365b7f" msprop:DbColumnName="UserId" msprop:FriendlyName="UserId" type="xs:int" />
+                  <xs:element name="AnswerId" msprop:design-time-name="2407147b-611c-4ebc-9404-74f210f0f6c0" msprop:DbColumnName="AnswerId" msprop:FriendlyName="AnswerId" type="xs:int" />
+                  <xs:element name="CorrectAnswer" msprop:design-time-name="7c0c9ed7-2744-4617-8b04-39c2a10fee8a" msprop:DbColumnName="CorrectAnswer" msprop:FriendlyName="CorrectAnswer" type="xs:int" />
+                  <xs:element name="AnswerValue" msprop:design-time-name="273eb1a9-9ad0-4e0f-962f-86ed2ef49e6d" msprop:DbColumnName="AnswerValue" msprop:FriendlyName="AnswerValue" type="xs:int" />
+                  <xs:element name="Confidence" msprop:design-time-name="53d4865b-f902-4146-8ce4-ed207cd8891c" msprop:DbColumnName="Confidence" msprop:FriendlyName="Confidence" type="xs:double" />
+                  <xs:element name="SubjectId" msprop:design-time-name="699ce779-7ef1-42e6-91f3-a4af3e1f0170" msprop:DbColumnName="SubjectId" msprop:FriendlyName="SubjectId">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsCorrect" msprop:design-time-name="bf948918-0082-4bcf-b9d0-ce0865da2942" msprop:DbColumnName="IsCorrect" msprop:FriendlyName="IsCorrect" type="xs:int" />
+                  <xs:element name="OrganizationId" msprop:design-time-name="1d852d78-f9f9-4e2b-8ca0-e123b3de24b5" msprop:DbColumnName="OrganizationId" msprop:FriendlyName="OrganizationId" type="xs:int" />
+                  <xs:element name="DateId" msprop:design-time-name="7586e748-00af-4aef-b419-caa0e5416617" msprop:DbColumnName="DateId" msprop:FriendlyName="DateId" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_24_date" msprop:design-time-name="8b650702-0946-465c-bc02-6fdcc95d8e3d" msprop:DbTableName="date" msprop:FriendlyName="date" msprop:DbSchemaName="Group_24" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateId" msprop:design-time-name="beaf9996-6a5a-48de-bbec-3ea9cbf9a8b5" msprop:DbColumnName="DateId" msprop:FriendlyName="DateId" type="xs:int" />
+                  <xs:element name="Date" msprop:design-time-name="f969e420-9361-4420-bd7a-67e5c7783a54" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:design-time-name="98b917b0-d347-4bd3-93a0-441c932e3cc0" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" />
+                  <xs:element name="Month" msprop:design-time-name="5772c728-8918-44db-ab43-370afe28eb85" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" />
+                  <xs:element name="Year" msprop:design-time-name="36047d7c-47f1-485b-b6a9-2eb7a7c43929" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" />
+                  <xs:element name="Quarter" msprop:design-time-name="002ac4ee-3bdd-4f49-bb42-f196948fe600" msprop:DbColumnName="Quarter" msprop:FriendlyName="Quarter" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_24_geography" msprop:design-time-name="db4bc07e-2e62-487b-81e3-005b3b4d0efb" msprop:DbTableName="geography" msprop:FriendlyName="geography" msprop:DbSchemaName="Group_24" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="GeoId" msprop:design-time-name="fc972fff-ea2f-4fd2-97f3-5f9193876a0b" msprop:DbColumnName="GeoId" msprop:FriendlyName="GeoId" type="xs:int" />
+                  <xs:element name="Region" msprop:design-time-name="5bac23b5-dc85-444b-881f-34b6e67ec8e2" msprop:DbColumnName="Region" msprop:FriendlyName="Region">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CountryName" msprop:design-time-name="7d8e0a55-69bd-45b4-b7ac-1fc6b94137e6" msprop:DbColumnName="CountryName" msprop:FriendlyName="CountryName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Continent" msprop:design-time-name="55a54fc5-3cdb-44ca-88e5-2de56fb2ad1a" msprop:DbColumnName="Continent" msprop:FriendlyName="Continent">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_24_organization" msprop:design-time-name="b1b2de02-4a90-4a49-8da0-fd0d4fc1edd1" msprop:DbTableName="organization" msprop:FriendlyName="organization" msprop:DbSchemaName="Group_24" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="OrganizationId" msprop:design-time-name="8d882c3f-722d-43e5-8e62-39ab217f8c71" msprop:DbColumnName="OrganizationId" msprop:FriendlyName="OrganizationId" type="xs:int" />
+                  <xs:element name="GroupId" msprop:design-time-name="55b3b043-b847-4e27-b68b-86eb703a13de" msprop:DbColumnName="GroupId" msprop:FriendlyName="GroupId" type="xs:int" />
+                  <xs:element name="QuizId" msprop:design-time-name="d972bb2d-dc16-46e4-8ca3-541e197f7ec4" msprop:DbColumnName="QuizId" msprop:FriendlyName="QuizId" type="xs:int" />
+                  <xs:element name="SchemeOfWorkId" msprop:design-time-name="9c47d00e-adeb-4dfd-83e8-e28afebb22bb" msprop:DbColumnName="SchemeOfWorkId" msprop:FriendlyName="SchemeOfWorkId" type="xs:double" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_24_subject" msprop:design-time-name="31b4b8ec-9628-40e2-a9da-b583e2d8e218" msprop:DbTableName="subject" msprop:FriendlyName="subject" msprop:DbSchemaName="Group_24" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SubjectId" msprop:design-time-name="16043d17-9e90-4a4e-ac05-1947951ff259" msprop:DbColumnName="SubjectId" msprop:FriendlyName="SubjectId">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Description" msprop:design-time-name="e05fe23e-679d-4a8b-b81d-5af5e7b2fef8" msprop:DbColumnName="Description" msprop:FriendlyName="Description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Group_24_user" msprop:design-time-name="cb437db5-14a8-43ca-92e4-493d9319f300" msprop:DbTableName="user" msprop:FriendlyName="user" msprop:DbSchemaName="Group_24" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UserId" msprop:design-time-name="62dc5c49-6931-4c4b-953c-a3faba28f1eb" msprop:DbColumnName="UserId" msprop:FriendlyName="UserId" type="xs:int" />
+                  <xs:element name="DateOfBirthId" msprop:design-time-name="3d27bbe4-fab3-4fa9-a987-a665eec0411d" msprop:DbColumnName="DateOfBirthId" msprop:FriendlyName="DateOfBirthId" type="xs:int" />
+                  <xs:element name="GeoId" msprop:design-time-name="86b073dd-529d-47bf-adaa-f590056edf30" msprop:DbColumnName="GeoId" msprop:FriendlyName="GeoId" type="xs:int" />
+                  <xs:element name="Gender" msprop:design-time-name="d9d1bec0-0351-4fa7-83b0-599ff8d6976e" msprop:DbColumnName="Gender" msprop:FriendlyName="Gender" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_sysdiagrams" />
+          <xs:field xpath="diagram_id" />
+        </xs:unique>
+        <xs:unique name="Group_24_answers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_24_answers" />
+          <xs:field xpath="AnswerId" />
+        </xs:unique>
+        <xs:unique name="Group_24_date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_24_date" />
+          <xs:field xpath="DateId" />
+        </xs:unique>
+        <xs:unique name="Group_24_geography_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_24_geography" />
+          <xs:field xpath="GeoId" />
+        </xs:unique>
+        <xs:unique name="Group_24_organization_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_24_organization" />
+          <xs:field xpath="OrganizationId" />
+        </xs:unique>
+        <xs:unique name="Group_24_subject_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_24_subject" />
+          <xs:field xpath="SubjectId" />
+        </xs:unique>
+        <xs:unique name="Group_24_user_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Group_24_user" />
+          <xs:field xpath="UserId" />
+        </xs:unique>
+        <xs:keyref name="FK_user_date" refer="Group_24_date_Constraint1">
+          <xs:selector xpath=".//Group_24_user" />
+          <xs:field xpath="DateOfBirthId" />
+        </xs:keyref>
+        <xs:keyref name="FK_user_geography" refer="Group_24_geography_Constraint1">
+          <xs:selector xpath=".//Group_24_user" />
+          <xs:field xpath="GeoId" />
+        </xs:keyref>
+        <xs:keyref name="FK_answers_subject" refer="Group_24_subject_Constraint1">
+          <xs:selector xpath=".//Group_24_answers" />
+          <xs:field xpath="SubjectId" />
+        </xs:keyref>
+        <xs:keyref name="FK_answers_organization" refer="Group_24_organization_Constraint1">
+          <xs:selector xpath=".//Group_24_answers" />
+          <xs:field xpath="OrganizationId" />
+        </xs:keyref>
+        <xs:keyref name="FK_answers_user" refer="Group_24_user_Constraint1">
+          <xs:selector xpath=".//Group_24_answers" />
+          <xs:field xpath="UserId" />
+        </xs:keyref>
+        <xs:keyref name="FK_answers_date" refer="Group_24_date_Constraint1">
+          <xs:selector xpath=".//Group_24_answers" />
+          <xs:field xpath="DateId" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Group_x0020_24_x0020_DB xmlns="" />
+  </Schema>
+</DataSourceView>
