@@ -1,0 +1,8 @@
+
+-- Assignment 2
+with member percentualecorrect as
+([Measures].[Is Correct]/[Measures].[Conteggio di Answers]),
+format_string = "Percent"
+Select percentualecorrect on columns,
+[Subject].[Subject Id].[Subject Id] on rows
+from [Group_24_DB]
