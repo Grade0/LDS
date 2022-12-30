@@ -24,10 +24,6 @@
       <FullPath>Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Geography.dim</Name>
-      <FullPath>Geography.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Organization.dim</Name>
       <FullPath>Organization.dim</FullPath>
     </ProjectItem>
@@ -38,6 +34,10 @@
     <ProjectItem>
       <Name>User.dim</Name>
       <FullPath>User.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Geography.dim</Name>
+      <FullPath>Geography.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
