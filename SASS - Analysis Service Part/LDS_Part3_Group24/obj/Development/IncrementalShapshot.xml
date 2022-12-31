@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>FqPVseAPsg3kBqFQB9oYSEl6vjA=28/12/2022 15:27:0228/12/2022 15:27:01</TimeStamp>
+        <TimeStamp>MnkQlZ6xnkNKFmXhuivLdMRitBw=30/12/2022 23:12:4428/12/2022 15:27:01</TimeStamp>
         <ID>
           <String>Group 24 DB</String>
         </ID>
@@ -36,13 +36,6 @@
         <TimeStamp>oamwWr3PzZGF842gdLBx7jKZSlY=28/12/2022 16:12:4628/12/2022 15:57:47</TimeStamp>
         <ID>
           <String>Date</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>1ISy1e/LR1RW8oYHgd9B9UpJ3/E=28/12/2022 16:40:4528/12/2022 16:36:18</TimeStamp>
-        <ID>
-          <String>Geography</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
@@ -61,14 +54,14 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>dtBw7YWKRyeb7EgiKVQOAA5ucO4=28/12/2022 22:47:1928/12/2022 22:29:53</TimeStamp>
+        <TimeStamp>SQJvFq7vGtQKLpPurrNjjYfod6M=31/12/2022 14:04:4630/12/2022 17:28:50</TimeStamp>
         <ID>
-          <String>User</String>
+          <String>UserGeo</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>XhQD03fqH5mXOjxe5CEkXcNMkZ0=29/12/2022 00:00:3328/12/2022 23:28:30HCQCN6vrBGpX8nrummIKFtJ5SPE=28/12/2022 23:33:5028/12/2022 23:28:30</TimeStamp>
+        <TimeStamp>fiDeO65U+bXEp/RPU9jMuGJGlMo=31/12/2022 14:10:3530/12/2022 23:47:55PRcu2xOcY1W0hdJft0q7/WxWNjQ=31/12/2022 00:09:3130/12/2022 23:47:57</TimeStamp>
         <ID>
           <String>Group 24 DB</String>
         </ID>
@@ -85,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2022-12-28T23:00:38.073333Z</LastDeployed>
+  <LastDeployed>2022-12-31T13:22:00.42Z</LastDeployed>
 </DeploymentSnapshot>

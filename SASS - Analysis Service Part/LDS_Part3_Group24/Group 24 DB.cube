@@ -1,6 +1,6 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f030071b-bf85-4133-9594-30340d3df6cd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="29c125e5-fbe0-4dda-a716-d07acf56c746" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Group 24 DB</ID>
-  <Name>Group_24_DB</Name>
+  <Name>Group 24 DB</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="26" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7632" scrolltop="-114" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29356" y="14698" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="26" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7439" scrolltop="-286" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="29356" y="14698" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="0100000090019e330100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="organization" left="5326" top="11864" logicalid="13" controlid="1" masterid="0" hint1="0" hint2="0" width="3188" height="2156" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="organization" left="10820" top="6448" logicalid="13" controlid="1" masterid="0" hint1="0" hint2="0" width="3188" height="2156" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000740c00006c080000" />
             </control>
@@ -52,9 +52,9 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="answers" left="5420" top="5244" logicalid="16" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="4220" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="answers" left="5420" top="5244" logicalid="16" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="4564" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00007c100000" />
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d4110000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -74,7 +74,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="subject" left="10820" top="6620" logicalid="18" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1468" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="subject" left="5420" top="12208" logicalid="18" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="1468" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000bc050000" />
             </control>
@@ -85,7 +85,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="6521" top="9164" logicalid="19" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8120" top="7127" logicalid="19" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -98,9 +98,9 @@
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="6920" y="11864" />
-              <point x="6920" y="9464" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10820" y="7526" />
+              <point x="8420" y="7526" />
             </connector>
           </ddscontrol>
           <ddscontrol controlprogid="MSDDS.Polyline" left="8120" top="1023" logicalid="20" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -159,25 +159,7 @@
               <point x="5820" y="5244" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="8120" top="6955" logicalid="23" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-            <control>
-              <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-              </ddsxmlobj>
-            </control>
-            <layoutobject>
-              <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK_answers_subject]" vartype="8" />
-                <property name="Virtual" value="0" vartype="11" />
-                <property name="VisibleAP" value="0" vartype="3" />
-              </ddsxmlobj>
-            </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="10820" y="7354" />
-              <point x="8420" y="7354" />
-            </connector>
-          </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="6521" top="2001" logicalid="24" controlid="12" masterid="0" hint1="0" hint2="0" width="1249" height="3543" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6521" top="2001" logicalid="23" controlid="11" masterid="0" hint1="0" hint2="0" width="1249" height="3543" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -197,6 +179,24 @@
               <point x="7470" y="5244" />
             </connector>
           </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6521" top="9508" logicalid="24" controlid="12" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_answers_subject]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6920" y="12208" />
+              <point x="6920" y="9808" />
+            </connector>
+          </ddscontrol>
         </dds>
       </Value>
     </Annotation>
@@ -214,11 +214,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-7632</Value>
+      <Value>-7439</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-114</Value>
+      <Value>-286</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -236,81 +236,98 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="302b0a6f-1c60-4c52-8779-167519c0c8d8">
-      <ID>Subject</ID>
-      <Name>Subject</Name>
-      <DimensionID>Subject</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="dad7ac55-0df7-4fa2-b71a-87549f3fed94">
-          <AttributeID>Subject Id</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="a1d26a97-ff58-4aeb-b97e-73eec371b01e">
-      <ID>Organization</ID>
-      <Name>Organization</Name>
-      <DimensionID>Organization</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="d77b5215-3ab1-4df7-9fc9-1e9771a011f1">
-          <AttributeID>Organization Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="13ca5c64-8635-4f8d-87d3-2f8cbea56242">
-          <AttributeID>Group Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="165f9adb-336f-4935-9bbb-bda56349e906">
-          <AttributeID>Quiz Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="2003e175-9572-4276-aee2-3c5bc5bfc0eb">
-          <AttributeID>Scheme Of Work Id</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="e6541425-cb59-4dfb-b4e7-ab098be907b3">
-      <ID>User</ID>
-      <Name>User</Name>
-      <DimensionID>User</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="12e54bd1-e356-4536-9457-1ace98f43bb7">
-          <AttributeID>User Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="d1e3f23e-a835-4c68-9407-3b8c211c3694">
-          <AttributeID>Geo Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="e48e51cf-0545-45c3-8747-aae28c0ebf70">
-          <AttributeID>Date Id</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="500243c3-d32c-4386-9076-29b1a3c25b97">
-          <AttributeID>Gender</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="cb32d50c-8867-4989-af1d-6b8eb6b4b75e">
+    <Dimension dwd:design-time-name="83b0b9bc-07d1-4b06-804f-c07249e52125">
       <ID>Date</ID>
       <Name>Date</Name>
       <DimensionID>Date</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="62ea758d-7077-4233-a22d-047e376811bf">
+        <Attribute dwd:design-time-name="9e8a94ad-42dd-4cf7-acf5-ab639836f570">
           <AttributeID>Date Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="41dd3fbd-dcd9-4405-82a9-7b3bc52cd679">
+        <Attribute dwd:design-time-name="ec01d458-ba86-4f25-a087-4d40ffbf09fc">
           <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="cf6b56a7-fa70-45c5-be86-d6a7cae1670c">
+        <Attribute dwd:design-time-name="4c0f9b27-2625-4826-a3d9-b698e73d189b">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="25e3f1cd-ab4f-48e3-bfb3-f6945cfae579">
+        <Attribute dwd:design-time-name="e65814cc-453f-4596-9017-b7d2fb7423ea">
           <AttributeID>Year</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="2a955dfe-5b84-47b3-937d-994c05bb1759">
+        <Hierarchy dwd:design-time-name="8a170c99-1323-43ec-b512-f01c4999594b">
+          <HierarchyID>Gerarchia</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="388b49db-2625-4f44-8377-b92fe57bb3d7">
+      <ID>Organization</ID>
+      <Name>Organization</Name>
+      <DimensionID>Organization</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="19b913d2-8116-431d-baa9-2e8af31edfe7">
+          <AttributeID>Organization Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5cc99b02-23d4-496a-a959-63fad0937060">
+          <AttributeID>Group Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="330eb2d0-9fba-494e-9640-01db6b950246">
+          <AttributeID>Quiz Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afd2f48d-d0fb-4710-a047-ac3943156cf8">
+          <AttributeID>Scheme Of Work Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="cf864367-31d2-4dce-81ea-1702a23addfe">
+      <ID>Subject</ID>
+      <Name>Subject</Name>
+      <DimensionID>Subject</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="76f603eb-ade2-4851-be28-d8f25692e239">
+          <AttributeID>Subject Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="86d5e809-4951-4317-a25f-b638476d5774">
+      <ID>UserGeo</ID>
+      <Name>UserGeo</Name>
+      <DimensionID>UserGeo</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="01fa08f1-d8c7-4a2c-b086-e3967f85b078">
+          <AttributeID>User Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6940c667-2fe8-45f5-b313-f245d54f154f">
+          <AttributeID>Geo Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d4f84e81-97f3-4601-aeb8-7a9706272a91">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f35c2112-0b96-456e-8278-3fa11a711e9d">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3535da16-4bcf-4672-bc66-7529d032994b">
+          <AttributeID>Continent</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9fd38b33-1582-4d00-9f3b-ea0de6c17607">
+          <AttributeID>Date Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e3ad1b8-cc56-45b9-8c7c-a24fda304232">
+          <AttributeID>Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b16c1a6-62b4-4e7f-8f5a-58e6d383abb3">
+          <AttributeID>Date Of Birth Id</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="828c367a-b7ad-4217-9c6f-f66e160824d6">
           <HierarchyID>Gerarchia</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="9b5b1bf9-94ac-4496-b17c-1941d238addc">
+    <MeasureGroup dwd:design-time-name="da52d23c-1378-4496-b1ba-8c93f7c42681">
       <ID>Answers</ID>
       <Name>Answers</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -318,46 +335,58 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="bf274384-dc7d-4a05-aa35-5bdd2ad44bc8">
+        <Measure dwd:design-time-name="81dc911c-7414-478d-81e3-62edb8d9d87e">
           <ID>Is Correct</ID>
           <Name>Is Correct</Name>
-          <Source dwd:design-time-name="78ac80de-22c8-4ffb-8250-a9b399cb6af6">
+          <Source dwd:design-time-name="3ad030f8-e733-43fe-9e3b-fe425c1377a1">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="592f5334-644a-4c76-a4fe-78730aac41d0">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5cbc31c0-ac62-4766-8168-4e3fb317477a">
               <TableID>Group_24_answers</TableID>
               <ColumnID>IsCorrect</ColumnID>
             </Source>
           </Source>
           <FormatString>Standard</FormatString>
         </Measure>
-        <Measure dwd:design-time-name="98ad25df-2114-4682-a43a-9ec08048ff9a">
+        <Measure dwd:design-time-name="ef29287b-c4cd-488d-a7c8-74a828f71f89">
+          <ID>Not Correct</ID>
+          <Name>Not Correct</Name>
+          <Source dwd:design-time-name="dad67100-b214-4d7a-a196-41e6f1064761">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7dd2f40a-8f4f-4241-bfeb-2c353e53e466">
+              <TableID>Group_24_answers</TableID>
+              <ColumnID>NotCorrect</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>Standard</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="1a6ac38f-1f3a-4126-8c1c-f5ed6c6f00ae">
           <ID>Conteggio di Answers</ID>
           <Name>Conteggio di Answers</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="e5f5c4f8-196e-4507-9e95-68d8b2a91546">
+          <Source dwd:design-time-name="77eeb629-12ea-44f2-9c20-b0799e5789b3">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="d4a25995-f327-4155-9476-ee7d218d9fe2">
+            <Source xsi:type="RowBinding" dwd:design-time-name="f6865202-5025-4940-bf1f-0e36e2f0f2e4">
               <TableID>Group_24_answers</TableID>
             </Source>
           </Source>
+          <FormatString>Standard</FormatString>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2a801866-919b-4776-a78a-0d905b2d6223">
-          <CubeDimensionID>Subject</CubeDimensionID>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a1b75f78-b590-4441-8ec3-b7050290032b">
+          <CubeDimensionID>Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="50256972-45a6-43d0-8915-ab8883525f20">
-              <AttributeID>Subject Id</AttributeID>
+            <Attribute dwd:design-time-name="854bd878-2166-41f5-bbc1-c1caaf461d4a">
+              <AttributeID>Date Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="e0a3c08a-d37c-4d70-b718-14fb1bff4dda">
-                  <DataType>WChar</DataType>
-                  <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="de8cde3b-1e54-4709-aa84-23fb92bffa10">
+                <KeyColumn dwd:design-time-name="9c8a7d26-7128-49c7-9e2e-ae8a6de534d6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="77ab52eb-4f8c-4a16-913a-ad731f847ac4">
                     <TableID>Group_24_answers</TableID>
-                    <ColumnID>SubjectId</ColumnID>
+                    <ColumnID>DateId</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -365,15 +394,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e68e9ea8-ed9e-44bf-bbc6-0b20b4e7b75b">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8a7c8756-8028-428d-80b5-08954e87ff61">
           <CubeDimensionID>Organization</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="6ce9f5c1-4960-45f0-b15d-db82e1b9a8e1">
+            <Attribute dwd:design-time-name="074e683e-bd55-4bcd-9119-8484085fb057">
               <AttributeID>Organization Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="ef7a8a26-eec5-4ec9-8866-50a82d832319">
+                <KeyColumn dwd:design-time-name="01d2cc64-7239-46c9-a6e4-d2f1ee2ba31e">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b58a8701-7e28-4960-8fdf-25dd359b664a">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="44183058-4e72-4984-acee-da0baacd0395">
                     <TableID>Group_24_answers</TableID>
                     <ColumnID>OrganizationId</ColumnID>
                   </Source>
@@ -383,15 +412,34 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a7174007-7428-41ed-a0d6-5647810eedbd">
-          <CubeDimensionID>User</CubeDimensionID>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0c8800a3-5b6d-4291-a6aa-1e0e0110d5da">
+          <CubeDimensionID>Subject</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="857ee06b-4373-4fc0-a900-963b414fb801">
+            <Attribute dwd:design-time-name="330acde4-1014-41e0-890e-a432c80f8b68">
+              <AttributeID>Subject Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="813187c5-2ee4-4d7f-b09e-97702288c063">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="97ce827e-8faa-405e-b9bc-b4dd52afa535">
+                    <TableID>Group_24_answers</TableID>
+                    <ColumnID>SubjectId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="675a41c0-8849-451b-a671-a9c33c3240dc">
+          <CubeDimensionID>UserGeo</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8085eaca-95ad-4ab8-9cf8-e74b798c267f">
               <AttributeID>User Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="2c64dc66-59a6-41d4-913a-eb0d8cdf11dc">
+                <KeyColumn dwd:design-time-name="4f4e2e8b-ee00-4fa3-8473-c64090e0748a">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4f5d512d-c516-4780-aec4-ecafd36c3b38">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7cae33a8-7e1e-4c3d-90b0-81b61fb903bb">
                     <TableID>Group_24_answers</TableID>
                     <ColumnID>UserId</ColumnID>
                   </Source>
@@ -401,17 +449,45 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c158cdc1-e9f9-44f6-acd3-58915c2fc7fa">
-          <CubeDimensionID>Date</CubeDimensionID>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="7f8219a7-fa3e-4286-9821-a4f6cc2d07a8">
+      <ID>User</ID>
+      <Name>User</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ad78f304-9d9f-4568-9b0e-f84bf21eb84c">
+          <ID>Conteggio di User</ID>
+          <Name>Conteggio di User</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="ff13038a-8cec-413f-8577-76f5c219559d">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="8f405723-beb3-44a7-823d-6063963d7329">
+              <TableID>Group_24_user</TableID>
+            </Source>
+          </Source>
+          <FormatString>Standard</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7300e0c4-c09a-427e-8532-2c33cbb29c69">
+          <CubeDimensionID>UserGeo</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="8a08ae82-9f60-4da6-b443-7c54b89bef9e">
-              <AttributeID>Date Id</AttributeID>
+            <Attribute dwd:design-time-name="d4e495e8-1b55-42a2-aaf0-27c21f42cc6e">
+              <AttributeID>User Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="5c893254-6fde-4d6d-94cb-bf114b1a34d7">
+                <KeyColumn dwd:design-time-name="4e811e61-4cff-4477-bef1-195782930e5e">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f740469f-a6b5-43eb-9ce5-11a396847d13">
-                    <TableID>Group_24_answers</TableID>
-                    <ColumnID>DateId</ColumnID>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="abe5a828-163b-48e2-a3ba-a3e876e60d23">
+                    <TableID>Group_24_user</TableID>
+                    <ColumnID>UserId</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>
@@ -423,25 +499,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="ce570048-3dac-4597-8d11-928f98a11f1d">
+  <Source dwd:design-time-name="dc680be3-c082-486e-9693-e030ba9639a2">
     <DataSourceViewID>Group 24 DB</DataSourceViewID>
   </Source>
-  <MdxScripts>
-    <MdxScript dwd:design-time-name="75c77d97-0070-4510-a6b4-22522e93023d">
-      <ID>MdxScript</ID>
-      <Name>MdxScript</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <Commands>
-        <Command>
-          <Text>/*
-Il comando CALCULATE controlla l'aggregazione delle celle foglia nel cubo.
-L'eliminazione o la modifica del comando CALCULATE influisce sui dati nel cubo.
-È consigliabile modificare il comando solo se si specifica manualmente la modalità di aggregazione del cubo.
-*/
-CALCULATE; </Text>
-        </Command>
-      </Commands>
-    </MdxScript>
-  </MdxScripts>
 </Cube>

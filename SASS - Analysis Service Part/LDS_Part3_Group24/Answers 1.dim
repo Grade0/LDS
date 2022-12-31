@@ -1,0 +1,240 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c2bb3ce1-4270-4371-af72-c540c823aeca" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Answers</ID>
+  <Name>Answers</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="20f60bd8-88b7-4480-8314-454b85f163ec">
+    <DataSourceViewID>Group 24 DB</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="10cfcb9b-9a1a-47ab-96a2-1ddc587fc83c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="89b631ff-346f-4ec8-a892-cb0b27f6f120">
+      <ID>Answer Id</ID>
+      <Name>Answer Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6d3b4806-9e97-4501-a150-7e59e88310a5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7cfe671-0e44-422a-9c8b-5968110837f2">
+            <TableID>Group_24_answers</TableID>
+            <ColumnID>AnswerId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ea437854-e208-429b-adf7-f324f9edefba">
+          <AttributeID>Is Correct</AttributeID>
+          <Name>Is Correct</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="456126b7-abf9-450e-9a1f-33faba6adadf">
+          <AttributeID>Not Correct</AttributeID>
+          <Name>Not Correct</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="41a21968-9818-4764-9f32-1b7ea32fcf52">
+          <AttributeID>Answers Correctness</AttributeID>
+          <Name>Answers Correctness</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3366bfc3-145b-4033-afaa-36764b0e259d">
+          <AttributeID>Date Id</AttributeID>
+          <Name>Date Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fc7e4815-5b79-4da8-aca7-a68977dbbdd2">
+          <AttributeID>User Id</AttributeID>
+          <Name>User Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="29d77977-45fe-4f53-8ef2-16715a703faf">
+          <AttributeID>Organization Id</AttributeID>
+          <Name>Organization Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6b8814f8-074b-4458-badb-7599571c3488">
+          <AttributeID>Subject Id</AttributeID>
+          <Name>Subject Id</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d181f06c-04b7-4b2e-9e2e-f6449e5d9dd4">
+      <ID>Is Correct</ID>
+      <Name>Is Correct</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10a7ba71-2482-4204-a667-30d3839f5801">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24b43ac1-220a-4489-9376-84ff880a4597">
+            <TableID>Group_24_answers</TableID>
+            <ColumnID>IsCorrect</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b5ba2299-69d6-4a70-94da-3870958de66e">
+      <ID>Not Correct</ID>
+      <Name>Not Correct</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="95b87bc7-9a0b-4c39-bff6-2eeeae37edd6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dc72eb64-a4d7-4a73-8f88-c82365ae648e">
+            <TableID>Group_24_answers</TableID>
+            <ColumnID>NotCorrect</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c9dd89f0-c518-4a1d-b924-212e69f3a54a">
+      <ID>Answers Correctness</ID>
+      <Name>Answers Correctness</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="28f4b18d-454f-4bf4-9d1b-42408b83e733">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e98e4907-d269-4ceb-805d-e829695806bd">
+            <TableID>Group_24_answers</TableID>
+            <ColumnID>answers_correctness</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c544eb5c-887e-4ae0-bce3-ec661cdebc5f">
+      <ID>Date Id</ID>
+      <Name>Date Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0141f8cf-efdf-4ac0-8ea0-98a5ba34800b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="87fb449a-9c43-440a-90aa-1fa581006eb8">
+            <TableID>Group_24_date</TableID>
+            <ColumnID>DateId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8df2900a-b985-47cb-871a-c6410c3b6cae">
+      <ID>User Id</ID>
+      <Name>User Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ce3593a1-bb40-4c5d-a4c7-1855fa87b9a0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f355eca1-df53-4f32-89aa-cce3d0f5f365">
+            <TableID>Group_24_user</TableID>
+            <ColumnID>UserId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6161f833-e507-4df4-8bf2-35fe9b611884">
+          <AttributeID>Geo Id</AttributeID>
+          <Name>Geo Id</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d246da2-97a4-4bcd-8ef8-3e1fff31f925">
+      <ID>Geo Id</ID>
+      <Name>Geo Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="93e577c5-2982-4538-b809-2776e8f1a92c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="df44f24a-f575-47eb-8cd9-cf566f311bd9">
+            <TableID>Group_24_geography</TableID>
+            <ColumnID>GeoId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="476683dd-f5d8-48c4-a028-c4c44dba0e27">
+      <ID>Organization Id</ID>
+      <Name>Organization Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="feda9269-b0b0-4d50-9988-ed984c9d3456">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="331fd604-6b14-4e7f-8bf8-6ca6c741203b">
+            <TableID>Group_24_organization</TableID>
+            <ColumnID>OrganizationId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2393cf1e-6d81-4b1a-84bc-77733c6ca490">
+      <ID>Subject Id</ID>
+      <Name>Subject Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="32dc54a5-d00d-4c66-b001-0c3c66b7dbe2">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cbb35a86-49a5-4266-bfe0-22b14c6aa95e">
+            <TableID>Group_24_subject</TableID>
+            <ColumnID>SubjectId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

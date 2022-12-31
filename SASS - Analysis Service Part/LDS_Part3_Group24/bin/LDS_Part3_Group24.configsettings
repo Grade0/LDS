@@ -15,16 +15,13 @@
         <ID>Date</ID>
       </Dimension>
       <Dimension>
-        <ID>Geography</ID>
-      </Dimension>
-      <Dimension>
         <ID>Organization</ID>
       </Dimension>
       <Dimension>
         <ID>Subject</ID>
       </Dimension>
       <Dimension>
-        <ID>User</ID>
+        <ID>UserGeo</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -36,6 +33,14 @@
             <Partitions>
               <Partition>
                 <ID>Answers</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>User</ID>
+            <Partitions>
+              <Partition>
+                <ID>User</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>
