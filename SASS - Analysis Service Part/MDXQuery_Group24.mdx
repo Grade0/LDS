@@ -1,8 +1,46 @@
+-- Assignment 1
+WITH MEMBER difference AS
+CASE
+WHEN ([Measures].[Is Correct],[Date].[Year].&[2020]) = 0 then null
+WHEN ([Measures].[Is Correct],[Date].[Year].&[2020]) = null then null
+WHEN ([Measures].[Is Correct],[Date].[Year].&[2019]) = 0 then null
+WHEN ([Measures].[Is Correct],[Date].[Year].&[2019]) = null then null
+ELSE (([Measures].[Is correct],[Date].[Year].&[2020])-([Measures].[Is correct],[Date].[Year].&[2019]))
+							/([Measures].[Is correct],[Date].[Year].&[2019])
+END,
+format_string="percent"
+
+MEMBER is_correct_2019 AS
+([Date].[Year].&[2019],[Measures].[Is Correct])
+
+MEMBER is_correct_2020 AS
+[Measures].[Is Correct] - is_correct_2019
+
+SELECT filter([UserGeo].[User Id].[User Id], difference <> null) on rows,
+{is_correct_2019, is_correct_2020, difference} on columns
+FROM[Group 24 DB]
+
+
 
 -- Assignment 2
-with member percentualecorrect as
+WITH MEMBER correct_percentage AS
 ([Measures].[Is Correct]/[Measures].[Conteggio di Answers]),
 format_string = "Percent"
-Select percentualecorrect on columns,
+
+SELECT correct_percentage on columns,
 [Subject].[Subject Id].[Subject Id] on rows
-from [Group_24_DB]
+FROM [Group 24 DB]
+
+
+
+-- Assignment 3
+WITH MEMBER avg_incorrect AS
+(([UserGeo].[Continent], [UserGeo].[User Id].[ALL],
+[Measures].[Not Correct])/([UserGeo].[Continent], [UserGeo].[User Id].[ALL], [Measures].[Conteggio di User])),
+format_string = "standard"
+
+SELECT {[Measures].[Not Correct], avg_incorrect} on columns,
+filter (([UserGeo].[Continent].[Continent], [UserGeo].[User Id].[User Id]),
+[Measures].[Not Correct] >= avg_incorrect) on rows
+
+FROM [Group 24 DB];
