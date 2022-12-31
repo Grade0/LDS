@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Group_24_DB.cube</Name>
-      <FullPath>Group_24_DB.cube</FullPath>
+      <Name>Group 24 DB.cube</Name>
+      <FullPath>Group 24 DB.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Group_24_DB.partitions</Name>
-          <FullPath>Group_24_DB.partitions</FullPath>
+          <Name>Group 24 DB.partitions</Name>
+          <FullPath>Group 24 DB.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -32,12 +32,8 @@
       <FullPath>Subject.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>User.dim</Name>
-      <FullPath>User.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>Geography.dim</Name>
-      <FullPath>Geography.dim</FullPath>
+      <Name>UserGeo.dim</Name>
+      <FullPath>UserGeo.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

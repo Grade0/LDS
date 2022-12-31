@@ -21,10 +21,7 @@
         <ID>Subject</ID>
       </Dimension>
       <Dimension>
-        <ID>User</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Geography</ID>
+        <ID>UserGeo</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -40,10 +37,10 @@
             </Partitions>
           </MeasureGroup>
           <MeasureGroup>
-            <ID>Geography</ID>
+            <ID>User</ID>
             <Partitions>
               <Partition>
-                <ID>Geography</ID>
+                <ID>User</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>
