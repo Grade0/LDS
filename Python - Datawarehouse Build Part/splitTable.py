@@ -19,22 +19,22 @@ subject_metadata = Path("dataset/subject_metadata.csv")
 
 
 # Define the tables path and headers
-answerTable = Path("tables/answer.csv")
+answerTable = Path("database/tables/answer.csv")
 answerHeader = ["QuestionId", "UserId", "AnswerId", "CorrectAnswer", "AnswerValue", "Confidence", "SubjectId", "IsCorrect", "OrganizationId", "DateId"]
 
-organizationTable = Path("tables/organization.csv")
+organizationTable = Path("database/tables/organization.csv")
 organizationHeader = ["Organizationid", "GroupId", "QuizId", "SchemeOfWorkId"]
 
-dateTable = Path("tables/date.csv")
+dateTable = Path("database/tables/date.csv")
 dateHeader = ["DateId", "Date", "Day", "Month", "Year", "Quarter"]
 
-subjectTable = Path("tables/subject.csv")
+subjectTable = Path("database/tables/subject.csv")
 subjectHeader = ["SubjectId","Description"]
 
-userTable = Path("tables/user.csv")
+userTable = Path("database/tables/user.csv")
 userHeader = ["UserId", "DateOfBirthId", "GeoId", "Gender"]
 
-geoTable = Path("tables/geography.csv")
+geoTable = Path("database/tables/geography.csv")
 geoHeader = ["GeoId", "Region", "CountryName", "Continent"]
 
 # support variables
