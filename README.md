@@ -1,6 +1,10 @@
 # LDS
 "Decision Support System - Module II: Laboratory of Data Science" Class' Team Project - MSc in Data Science and Business Informatics @ University of Pisa
 
+## Project
+
+The project consists in a set of assignements corresponding to a BI process: data integration, construction of an OLAP cube, qurying of a OPLAP cube and reporting.
+
 ## Part 1: Datawarehouse building
 
 ### Introduction 
