@@ -1,7 +1,7 @@
 # LDS
 "Decision Support System - Module II: Laboratory of Data Science" Class' Team Project - MSc in Data Science and Business Informatics @ University of Pisa
 
-## Project Assignment - Part 1
+## Part 1: Datawarehouse building
 
 ### Introduction 
 In Part 1 of the project you are required to create and populate a database starting from .csv files and perform different operations on it. In the following you can find a set of incremental assignments, each one with a brief description of what you are required to produce and what tools you can use for the task.
@@ -28,8 +28,61 @@ Write a python program that splits the content of answers full.csv into the six 
 > Write a Python program that populates the database GroupID DB with all teh data you prepared in Assignment 1, establishing schema relations as appropriate.
 
 <p align = "center">
-<img src = "/db_scheme/Database%20schema.png" width="80%" height="80%" border-radius: 90%>
+<img src = "database/db_scheme.png" width="80%" height="80%" border-radius: 90%>
 </p>
 <p align = "center">
 Fig.1 - Database diagram
 </p>
+
+## Part 2: SSIS - Integration Service
+
+### Introduction
+In Part 2 of the project you are required to solve some problems on the database you
+created in Part 1. Solve the exercises using Sequel Server Integration Services (SSIS) with
+computation on client side (i.e., do not use any sql command in the nodes, only standard
+SSIS nodes).
+
+> **_Assignment 0:_** 
+For every country, the number of total answers.
+
+> **_Assignment 1:_**
+> A group (identified by GroupId) is said to have an age mismatch if the difference
+between the date of birth of the youngest participating student and the oldest is
+greater than 365 days. List all the groups with an age mismatch.
+
+> **_Assignment 2:_** 
+For each continent the ratio between correct answers of males and correct answers
+of females
+
+## Part 3: SASS - Analysis Service
+
+### Introduction
+In Part 3 of the project you are required to answer some business questions on a datacube
+that you will create on the database you prepared. Document how you build your datacube in
+your report and solve the business questions using MultiDimensional eXpressions (MDX) in
+SQL management studio.
+
+> **_Assignment 0:_** 
+Build a datacube from the data of the tables in your database, defining the appropriate hierarchies for time and geography. Create the needed measures based on
+the queries you need to answer.
+
+> **_Assignment 1:_**
+>  Show the percentage increase or decrease in correct answers with respect to the
+previous year for each student
+
+> **_Assignment 2:_**
+> For each subject show the total correct answers in percentage with respect to the
+total answers of that subject.
+
+> **_Assignment 3:_**
+> Show the students having a total incorrect answers greater or equal than the average
+incorrect answers in each continent.
+
+> **_Assignment 4:_**
+> Create a dashboard that shows the geographical distribution of correct answers and
+incorrect answers
+
+> **_Assignment 5:_**
+> Create a plot/dashboard of your choosing, that you deem interesting w.r.t. the
+data available in your cube
+
