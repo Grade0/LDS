@@ -1,7 +1,7 @@
 # LDS
 "Decision Support System - Module II: Laboratory of Data Science" Class' Team Project - MSc in Data Science and Business Informatics @ University of Pisa
 
-## Project Assignment - Part 1
+## Project Assignment - Part 1: Datawarehouse building
 
 ### Introduction 
 In Part 1 of the project you are required to create and populate a database starting from .csv files and perform different operations on it. In the following you can find a set of incremental assignments, each one with a brief description of what you are required to produce and what tools you can use for the task.
@@ -34,7 +34,7 @@ Write a python program that splits the content of answers full.csv into the six 
 Fig.1 - Database diagram
 </p>
 
-## Project Assignment 2
+## Project Assignment - Part 2: SSIS - Integration Service
 
 ### Introduction
 In Part 2 of the project you are required to solve some problems on the database you
@@ -54,7 +54,7 @@ greater than 365 days. List all the groups with an age mismatch.
 For each continent the ratio between correct answers of males and correct answers
 of females
 
-## Project Assignment 3
+## Project Assignment - Part 3: SASS - Analysis Service
 
 ### Introduction
 In Part 3 of the project you are required to answer some business questions on a datacube
