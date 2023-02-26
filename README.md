@@ -3,7 +3,7 @@
 
 ## Project
 
-The project consists in a set of assignements corresponding to a BI process: data integration, construction of an OLAP cube, querying of a OPLAP cube and reporting.
+The project consists in a set of assignements corresponding to a BI process: data integration, construction and querying of an OLAP cube and reporting.
 
 ## Part 1: Datawarehouse building
 
